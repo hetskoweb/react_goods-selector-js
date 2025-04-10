@@ -16,7 +16,7 @@ export const goods = [
 ];
 
 export const App = () => {
-  const [activeGood, setActiveGood] = useState(null);
+  const [activeGood, setActiveGood] = useState('Jam');
 
   return (
     <main className="section container">
@@ -46,7 +46,7 @@ export const App = () => {
                   onClick={() =>
                     setActiveGood(prev => (prev === good ? null : good))
                   }
-                  data-cy={activeGood ? 'RemoveButton' : 'AddButton'}
+                  data-cy={activeGood === good ? 'RemoveButton' : 'AddButton'}
                   type="button"
                   className="button"
                 >
